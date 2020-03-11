@@ -9,7 +9,7 @@
         <groupId>com.formulasearchengine.mathosphere</groupId>
         <artifactId>mathosphere-parent</artifactId>
         <relativePath>../../pom.xml</relativePath>
-        <version>3.0.0</version>
+        <version>3.0.0-SNAPSHOT</version>
     </parent>
     
     <name>MathMLCanonicalizer</name>
