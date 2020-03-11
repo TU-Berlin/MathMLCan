@@ -6,7 +6,7 @@
     <artifactId>lib-mathml-canonicalizer</artifactId>
     <packaging>jar</packaging>
     <parent>
-        <groupId>com.formulasearchengine</groupId>
+        <groupId>com.formulasearchengine.mathosphere</groupId>
         <artifactId>mathosphere-parent</artifactId>
         <relativePath>../../pom.xml</relativePath>
         <version>3.0.0</version>
