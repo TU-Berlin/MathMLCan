@@ -117,7 +117,7 @@ public final class MathMLCanonicalizer {
      * @param module the module to be used in canonicalization
      * @return the canonizer object to allow adding more modules at once
      */
-    public MathMLCanonicalizer addModule(Module module) {
+    public MathMLCanonicalizer addModule(cz.muni.fi.mir.mathmlcanonicalization.modules.Module module) {
         if (module == null) {
             throw new NullPointerException("module");
         }
@@ -156,7 +156,7 @@ public final class MathMLCanonicalizer {
                     + ".modules." + moduleName;
             Class<?> moduleClass = Class.forName(fullyQualified);
 
-            return addModule((Module) moduleClass.newInstance());
+            return addModule((cz.muni.fi.mir.mathmlcanonicalization.modules.Module) moduleClass.newInstance());
         } catch (ClassNotFoundException ex) {
             LOGGER.log(Level.WARNING, "cannot load module " + moduleName, ex);
         } catch (InstantiationException ex) {
@@ -197,7 +197,7 @@ public final class MathMLCanonicalizer {
         final XMLStreamReader reader = inputFactory.createXMLStreamReader(xmlConfigurationStream);
 
         boolean config = false;
-        Module module = null;
+        cz.muni.fi.mir.mathmlcanonicalization.modules.Module module = null;
         while (reader.hasNext()) {
             final int event = reader.next();
             switch (event) {
@@ -218,7 +218,7 @@ public final class MathMLCanonicalizer {
                                         + ".modules." + attributeValue;
                                 try {
                                     Class<?> moduleClass = Class.forName(fullyQualified);
-                                    module = (Module) moduleClass.newInstance();
+                                    module = (cz.muni.fi.mir.mathmlcanonicalization.modules.Module) moduleClass.newInstance();
                                 } catch (InstantiationException ex) {
                                     LOGGER.log(Level.SEVERE, ex.getMessage(), ex);
                                     throw new ConfigException("cannot instantiate module "
