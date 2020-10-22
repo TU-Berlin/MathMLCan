@@ -15,7 +15,10 @@
  */
 package cz.muni.fi.mir.mathmlcanonicalization;
 
-import cz.muni.fi.mir.mathmlcanonicalization.modules.*;
+import cz.muni.fi.mir.mathmlcanonicalization.modules.DOMModule;
+import cz.muni.fi.mir.mathmlcanonicalization.modules.Module;
+import cz.muni.fi.mir.mathmlcanonicalization.modules.ModuleException;
+import cz.muni.fi.mir.mathmlcanonicalization.modules.StreamModule;
 import cz.muni.fi.mir.mathmlcanonicalization.utils.DTDManipulator;
 import java.io.*;
 import java.util.Arrays;
